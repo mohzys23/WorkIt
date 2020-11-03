@@ -3,7 +3,7 @@ $headerfont: 'Ubuntu', sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 $bodyfont: 'Lato', sans-serif;
 $color1: rgb(17, 16, 16);
-$color2: rgb(247, 247, 247);
+$color2: rgb(255, 255, 255);
 
 
 * {
@@ -15,8 +15,8 @@ $color2: rgb(247, 247, 247);
 body {
   margin: 0;
   font-family: $bodyfont;
-  background-color: $color1;
-  color: $color2;
+  background-color: $color2;
+  color: $color1;
 }
 
 code {

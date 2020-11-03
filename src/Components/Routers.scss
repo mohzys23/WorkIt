@@ -1,32 +1,65 @@
 @import '../index.scss';
 
+
  .routers {
      width: 100%;
      display: flex;
      font-family: $headerfont;
-     border-bottom: 1px solid white;
+     border-bottom: 1px solid $color1;
      
 
      .logo {
          width: 20%;
          text-transform: uppercase;
-         border-right: 1px solid white;
 
          h1 {
-             margin: 2rem 0 2rem 3rem;
-             font-size: 30px;
+             margin: 1.9rem 0 1.6rem 3rem;
+             font-size: 27px;
+             
          }
 
          a {
-             color: $color2;
+             color: $color1;
              text-decoration: none;
          }
      }
 
+     .search-bar {
+         width: 25%;
+         text-align: center;
+
+
+         .search-wrap {
+             width: 65%;
+             margin-top: 1.7rem;
+             border-radius: 20px;
+             margin-left: 3rem;
+             background-color: rgba(223, 223, 223, 0.815);
+             border: 2px solid rgba(196, 98, 98, 0.568);
+             animation: mymove 5s infinite;
+         }
+
+         @keyframes mymove {
+             50% {
+                 border-color: rgba(55, 55, 221, 0.733);
+             }
+         }
+
+
+         input {
+             width: 150px;
+             border: hidden;
+             font-size: 15px;
+             padding: .6rem;
+             outline: none;
+             background-color: rgba(223, 223, 223, 0.815);
+             
+         }
+     }
+
      nav {
-         width: 70%;
-         border: 1px solid white;
-         text-align: right;
+         width: 40%;
+         margin: 2rem 1rem 0 0;
          
 
          ul {
@@ -38,71 +71,116 @@
                  margin-left: 4rem;
 
                  a {
-                     color: $color2;
+                     color: $color1;
                      text-decoration: none;
+                 }
+
+                 a:hover {
+                     color: rgba(55, 55, 221, 0.733);
                  }
              }
          }
      }
 
     .icon {
-         margin-right: 3rem;
-         margin-bottom: 3rem;
+         margin: 2rem 0 2rem 5rem;
          position: relative;
-         border: 1px solid white;
          cursor: pointer;
+         
      }
+
+      
+    
      .login-form {
-         background-color: $color2;
+         background-color: rgba(163, 163, 163, 0.377);
          color: $color1;
          position: absolute;
          width: 30%;
          left: 59rem;
          text-align: center;
          font-family: $bodyfont;
+         background-image: url("../Assets/form-bg4.jpg");
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         border-radius: 10px;
+         border: 1px solid $color1;
+
+         
+
 
          form {
-             border: 1px solid white;
+             color: $color2;
 
              h4 {
-                 font-size: 29px;
-                 padding: 1rem 0 1.5rem;
+                 font-size: 24px;
+                 padding: 1.5rem 0 1.2rem;
+                 text-transform: uppercase;
              }
 
              input {
-                 width: 55%;
+                 font-size: 15px;
+                 width: 52%;
                  padding: .5rem;
-                 border: 1px solid white;
-                 border-radius: 5px;
+                 border: hidden;
+                 border-bottom: 1px solid $color2;
                  margin: .5rem 0 1rem;
-                 outline-color: rgba(59, 59, 223, 0.432);
+                 outline: none;
                  outline-offset: 1px;
+                 color: $color2;
+                 background-color:rgba(65, 65, 65, 0);
                 
              }
 
+             input:hover {
+                 border-bottom: 1px solid rgba(55, 55, 221, 0.733);
+             }
+
              button {
-                 padding: .4rem 1rem;
+                 padding: .5rem 1rem;
+                 color: white;
+                 background-color: rgba(173, 216, 230, 0.397);
                  text-transform: uppercase;
                  font-size: 12px;
                  margin: .8rem 0 1.7rem;
                  border-radius: 4px;
                  cursor: pointer;
+                 border-radius: 5px;
+                 border: none;
+             }
+
+             button:hover {
+                 color: $color2;
+                 background-color: rgba(61, 61, 233, 0.192);
              }
          }
 
-         p {
-             font-size: 13px;
-             
-             input {
-                width: 15px;
-                padding-right: .3rem;
+         .check-login {
+             width: 100%;
+             color: $color2;
+
+             label {
+                 font-size: 13px;
+
+                 input {
+                     width: 15px;
+                     margin: .6rem .5rem;
+                     
+                 }
              }
-        }
+         }
+
+         
 
         h6 {
             font-size: 14px;
+            padding-top: 1rem;
+            color: $color2;
+
             span {
-                color: rgba(52, 52, 167, 0.753);
+                cursor: pointer;
+                padding-left: .2rem;
+                color: rgba(230, 230, 245, 0.884);
             }
         }
      }

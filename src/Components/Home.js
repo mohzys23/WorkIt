@@ -1,5 +1,5 @@
 import React, {useState } from 'react';
-import Dashboard from './Dashboard';
+import Hero from './Hero';
 
 export default function Home() {
     const [like, setLike] = useState(0);
@@ -8,26 +8,32 @@ export default function Home() {
          setLike(like + 1);
      };
 
-     //const [show, setShow] = useState(false);
+            //const [show, setShow] = useState(false);
 
-     
-     {  /*
-     const moses = () => {
-         if (!show) {
-             setShow(true)
-            } else {
-                setShow(false)
+            
+              /*
+            const moses = () => {
+                if (!show) {
+                    setShow(true)
+                    } else {
+                        setShow(false)
+                    }
+
             }
 
-     }
-
-    */ }
+            */ 
 
 
    
     
     return(
+
         <div>
+
+        <Hero />
+
+
+        
             <h1 onClick={incerment}>&#x1F44D;</h1>
             <h1 onClick={() => setLike(like - 1)}>&#x1F44E;</h1>
             <h2>{like} like</h2>
