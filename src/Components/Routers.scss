@@ -1,3 +1,109 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&display=swap");
-$headerfont: 'Ubuntu', sans-serif;
+@import '../index.scss';
 
+ .routers {
+     width: 100%;
+     display: flex;
+     font-family: $headerfont;
+     border-bottom: 1px solid white;
+     
+
+     .logo {
+         width: 20%;
+         text-transform: uppercase;
+         border-right: 1px solid white;
+
+         h1 {
+             margin: 2rem 0 2rem 3rem;
+             font-size: 30px;
+         }
+
+         a {
+             color: $color2;
+             text-decoration: none;
+         }
+     }
+
+     nav {
+         width: 70%;
+         border: 1px solid white;
+         text-align: right;
+         
+
+         ul {
+             list-style-type: none;
+             
+
+             li {
+                 display: inline;
+                 margin-left: 4rem;
+
+                 a {
+                     color: $color2;
+                     text-decoration: none;
+                 }
+             }
+         }
+     }
+
+    .icon {
+         margin-right: 3rem;
+         margin-bottom: 3rem;
+         position: relative;
+         border: 1px solid white;
+         cursor: pointer;
+     }
+     .login-form {
+         background-color: $color2;
+         color: $color1;
+         position: absolute;
+         width: 30%;
+         left: 59rem;
+         text-align: center;
+         font-family: $bodyfont;
+
+         form {
+             border: 1px solid white;
+
+             h4 {
+                 font-size: 29px;
+                 padding: 1rem 0 1.5rem;
+             }
+
+             input {
+                 width: 55%;
+                 padding: .5rem;
+                 border: 1px solid white;
+                 border-radius: 5px;
+                 margin: .5rem 0 1rem;
+                 outline-color: rgba(59, 59, 223, 0.432);
+                 outline-offset: 1px;
+                
+             }
+
+             button {
+                 padding: .4rem 1rem;
+                 text-transform: uppercase;
+                 font-size: 12px;
+                 margin: .8rem 0 1.7rem;
+                 border-radius: 4px;
+                 cursor: pointer;
+             }
+         }
+
+         p {
+             font-size: 13px;
+             
+             input {
+                width: 15px;
+                padding-right: .3rem;
+             }
+        }
+
+        h6 {
+            font-size: 14px;
+            span {
+                color: rgba(52, 52, 167, 0.753);
+            }
+        }
+     }
+ }

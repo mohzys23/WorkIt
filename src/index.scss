@@ -1,10 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&display=swap");
+$headerfont: 'Ubuntu', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+$bodyfont: 'Lato', sans-serif;
+$color1: rgb(17, 16, 16);
+$color2: rgb(247, 247, 247);
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: $bodyfont;
+  background-color: $color1;
+  color: $color2;
 }
 
 code {
