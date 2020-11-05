@@ -1,5 +1,8 @@
 import React, {useState } from 'react';
 import Hero from './Hero';
+import TopAuthors from './TopAuthors';
+import Footer from './Footer';
+
 
 export default function Home() {
     const [like, setLike] = useState(0);
@@ -31,6 +34,7 @@ export default function Home() {
         <div>
 
         <Hero />
+        <TopAuthors />
 
 
         
@@ -42,7 +46,7 @@ export default function Home() {
   {/*<button onClick={moses}>login</button>
 {show && <Dashboard />}  */}
 
-
+<Footer />
         </div>
     );
 }

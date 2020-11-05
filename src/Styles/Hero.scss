@@ -62,14 +62,32 @@
             margin: 1rem 0 3rem 20%;
             font-size: 14px;
             border: none;
-            background-color: rgb(201, 147, 76);
+            background-color: rgb(124, 87, 37);
             color: $color2;
             text-transform: uppercase;
             font-weight: 600;
+            cursor: pointer;
+            animation: example 5s infinite;
         }
-        
-        button:hover {
-            background-color: rgba(243, 162, 56, 0.877);
-        }
+
+          button:hover {
+              background-color: rgba(255, 167, 52, 0.877);
+          }
+
+      
     }
+
+
+   @keyframes example {
+       from {
+           background-color: rgb(173, 113, 33);
+       }
+
+       to {
+           background-color: rgb(226, 133, 11);
+       }
+   }
+
+   
+        
 }
