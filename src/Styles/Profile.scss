@@ -1,0 +1,68 @@
+@import '../index.scss';
+
+.profile {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    .aside-left {
+        width: 20%;
+        height: 100vh;
+
+        .profile-info {
+            width: 80%;
+            border-bottom: 1px solid $color1;
+            margin-left: 10%;
+
+            img {
+                width: 50%;
+                border-radius: 100%;
+                margin: 3rem 0 2rem 3rem;
+            }
+
+            h1 {
+                font-size: 18px;
+                text-transform: capitalize;
+                margin: 0 0 3rem 3rem;
+                
+            }
+        }
+
+        ul {
+            margin: 2rem 0 2rem 5rem;
+
+            h2, h3, h4, h5, h6 {
+                padding-top: 2rem;
+                font-size: 16px;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .aside-right {
+        width: 75%;
+        background-color: rgba(55, 55, 221, 0.733);
+        height: 50vh;
+        margin-left: 2.5%;
+        margin-top: 2.5vh;
+        border-radius: 10px;
+        color: $color2;
+        text-transform: uppercase;
+
+        p {
+            font-size: 14px;
+            font-weight: 900;
+            margin: 1rem 2rem;
+        }
+    }
+
+    .aside-right-bottom {
+         width: 75%;
+         height: 45vh;
+         margin-left: 22.5%;
+         align-self: center;
+         position: absolute;
+         bottom: -5rem;
+    }
+}

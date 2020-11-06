@@ -31,6 +31,15 @@ export default function Router() {
         }
     }
 
+    const [userlogin, setUserLogin] = useState(false);
+    const [loginusername, setLoginUserName] = useState();
+    const [loginpassword, setLoginPassword] = useState();
+
+    if (setUserLogin === !loginusername & !loginpassword) {
+        userlogin(false)
+    } 
+
+
     return(
         <div className="routers">
 

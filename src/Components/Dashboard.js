@@ -1,10 +1,14 @@
 import React from 'react';
+import Footer from './Footer';
+import Profile from './Profile';
 
 
 export default function Dashboard() {
     return(
         <div>
-            <h1>Dashboard</h1>
+            <Profile />
+
+            <Footer />
         </div>
     );
 }

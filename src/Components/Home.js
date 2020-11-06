@@ -2,6 +2,8 @@ import React, {useState } from 'react';
 import Hero from './Hero';
 import TopAuthors from './TopAuthors';
 import Footer from './Footer';
+import Subscribe from './Subscribe';
+import BottomHero from './BottomHero';
 
 
 export default function Home() {
@@ -27,7 +29,6 @@ export default function Home() {
             */ 
 
 
-   
     
     return(
 
@@ -38,14 +39,15 @@ export default function Home() {
 
 
         
-            <h1 onClick={incerment}>&#x1F44D;</h1>
+           {/* <h1 onClick={incerment}>&#x1F44D;</h1>
             <h1 onClick={() => setLike(like - 1)}>&#x1F44E;</h1>
-            <h2>{like} like</h2>
+            <h2>{like} like</h2>  */ }
 
 
   {/*<button onClick={moses}>login</button>
 {show && <Dashboard />}  */}
-
+<BottomHero />
+<Subscribe />
 <Footer />
         </div>
     );
