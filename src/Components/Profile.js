@@ -27,6 +27,15 @@ export default function  Profile() {
         }
     }
 
+    const [addbook, setAddBook] = useState(false);
+    const add = () => {
+        if (!addbook) {
+            setAddBook(true)
+        } else {
+            setAddBook(false)
+        }
+    }
+
 
 
 
@@ -47,7 +56,22 @@ export default function  Profile() {
                 </ul>
             </div>
             <div className="aside-right">
-            <p>Recently Viewed</p>
+                <div className="add-books-right">
+                    <p>Recently Viewed</p>
+                    <button onClick={add}>Add Book</button>
+                </div>
+            
+            { addbook && 
+               <form>
+                   <input type="text" aria-label="book-title" placeholder="Enter Book Title" />
+                   <br />
+                   <input type="text" aria-label="author-name" placeholder="Author Name" />
+                   <br />
+                   <input type="file" aria-label="book-title" />
+                   <br />
+                   <input type="submit" />
+               </form>
+            }
 
             </div>
             <div className="aside-right-bottom">

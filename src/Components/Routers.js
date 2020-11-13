@@ -31,14 +31,51 @@ export default function Router() {
         }
     }
 
-    const [userlogin, setUserLogin] = useState(false);
     const [loginusername, setLoginUserName] = useState();
     const [loginpassword, setLoginPassword] = useState();
 
-    if (setUserLogin === !loginusername & !loginpassword) {
-        userlogin(false)
-    } 
 
+
+    // Login 
+    const changeLoginUserName = (event) => {
+        setLoginUserName(event.target.value);
+    }
+    const changeLogininPassword = (event) => {
+        setLoginPassword(event.target.value);
+    }
+
+   const onLogin = (event) => {
+       alert(`Login successful`);
+      event.preventDefault();
+   }
+
+
+   const [signupfullname, setSignupFullname] = useState();
+   const [signupemail, setSignupEmail] = useState();
+   const [signupusername, setSignupUsername] = useState();
+   const [signuppassword, setSignupPassword] = useState();
+
+
+   //Signup 
+
+    const changeSignupFullName = (event) => {
+        setSignupFullname(event.target.value);
+    }
+    const changeSignupEmial = (event) => {
+        setSignupEmail(event.target.value);
+    }
+    const changeSignupUsername = (event) => {
+        setSignupUsername(event.target.value);
+    }
+    const changeSignupPassword = (event) => {
+        setSignupPassword(event.target.value);
+    }
+   const onSignup = (event) => {
+       alert(`Hello, sign in with username as: ${signupusername}. \nand Password as: ${signuppassword} to access the dashboard`);
+      event.preventDefault();
+      
+   }
+   
 
     return(
         <div className="routers">
@@ -76,17 +113,17 @@ export default function Router() {
                        <h4>Login</h4>
                   
                    
-                   <input type="text" aria-label="username" placeholder="Username" />
+                   <input type="text" aria-label="username" placeholder="Username" onChange={changeLoginUserName} />
                    
                    <br />
-                   <input type="password" aria-label="assword" placeholder="Password"/>
+                   <input type="password" aria-label="assword" placeholder="Password" onChange={changeLogininPassword} />
                    <br />
                    <div className="check-login">
                    <label><input type="checkbox" arial-label="checkbox" />Remember me</label>
                    </div>
                    <h6>Don't have an account? <span onClick={signup}>Signup</span></h6>
                    <br />
-                   <button>Login</button>
+                   <button onClick={onLogin}>Login</button>
                        
                </form>
 
@@ -105,13 +142,13 @@ export default function Router() {
                        <h4>Signup</h4>
                   
                    
-                   <input type="text" aria-label="Full Name" placeholder="Full Name" />
+                   <input type="text" aria-label="Fullname" placeholder="Full Name" onChange={changeSignupFullName} />
                    <br />
-                   <input type="email" aria-label="email" placeholder="Email"/>
+                   <input type="email" aria-label="email" placeholder="Email" onChange={changeSignupEmial} />
                    <br />
-                   <input type="tel" aria-label="telephone" placeholder="Tel"/>
+                   <input type="text" aria-label="tusername" placeholder="Username" onChange={changeSignupUsername} />
                    <br />
-                   <input type="password" aria-label="assword" placeholder="Password"/>
+                   <input type="password" aria-label="password" placeholder="Password" onChange={changeSignupPassword} />
                    <br />
                    <div className="check-login">
                    <label><input type="checkbox" arial-label="checkbox" />Remember me</label>
@@ -119,7 +156,7 @@ export default function Router() {
                    <h6>Have an account? <span onClick={login}>Login</span></h6>
                    {show && login}
                    <br />
-                   <button>Signup</button>
+                   <button onClick={onSignup}>Signup</button>
                        
                </form>
             </div>  }

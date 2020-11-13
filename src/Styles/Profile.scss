@@ -50,10 +50,38 @@
         color: $color2;
         text-transform: uppercase;
 
+        .add-books-right {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
         p {
             font-size: 14px;
             font-weight: 900;
             margin: 1rem 2rem;
+        }
+
+        button {
+            margin-right: 2rem;
+            max-height: 50px !important;
+            background-color: rgba(197, 135, 55, 0.733);
+            color: $color2;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: .5rem;
+            margin-top: 1rem;
+            border: 1px solid $color2;
+        }
+
+        form {
+            width: 50%;
+
+            input {
+                padding: .4em;
+                margin: .5rem 2rem;
+            }
         }
     }
 
