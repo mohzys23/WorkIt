@@ -59,7 +59,7 @@ export default function  Profile() {
             <div className="aside-right">
                 <div className="add-books-right">
                     <p>Recently Viewed</p>
-                    <button onClick={add}>Add Book</button>
+                    <button onClick={add}>Add Book +</button>
                 </div>
             
             { addbook && 
@@ -71,7 +71,7 @@ export default function  Profile() {
                    <input type="file" aria-label="add-file" className="add-file" />
                    <input type="file" aria-label="add-file" className="add-file2" />
                    <br />
-                   <button>Submit</button>
+                   <button>Add book</button>
                </form>
             }
 

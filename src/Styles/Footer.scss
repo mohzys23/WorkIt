@@ -5,13 +5,13 @@
     background: rgba(55, 55, 221, 0.733);
     color: $color2;
     font-family: $bodyfont2;
-    h1 {
-        width: 100%;
-        text-align: center;
-        padding: 4rem 0 3rem;
-        font-size: 36px;
-        font-weight: 900;
-        text-transform: uppercase;
+
+    img {
+        width: 20%;
+        margin-left: 40%;
+        padding: 0rem 0 1rem;
+        -webkit-filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1);
     }
 
     .link-button {

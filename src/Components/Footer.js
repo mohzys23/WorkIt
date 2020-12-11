@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from "react-router-dom";
 import '../Styles/Footer.scss';
+import Logo from '../Assets/logo.png';
 
 export default function Footer() {
     return(
         <div className="footer">
-             <h1>Workiibook</h1>
+             <img src={Logo} alt="" />
         
              
              <div className="link-button">

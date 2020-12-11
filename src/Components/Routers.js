@@ -4,6 +4,7 @@ import '../Styles/Routers.scss';
 import './Library2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faSearch } from '@fortawesome/free-solid-svg-icons';
+import Logo from '../Assets/logo.png';
 
 
 
@@ -83,7 +84,7 @@ export default function Router() {
         <div className="routers">
 
             <div className="logo">
-                 <Link to="/"><h1>WORKIIBOOK</h1></Link>                    
+                 <Link to="/"><img src={Logo} alt="" /></Link>                    
             </div>
 
             <div className="search-bar">
