@@ -12,6 +12,7 @@ export default function  Profile() {
     const books = () => {
         if (!viewbooks) {
             setViewBooks(true)
+            setViewMeet(false)
         } else {
             setViewBooks(false)
         }
@@ -22,6 +23,7 @@ export default function  Profile() {
     const meet = () => {
         if (!viewmeet) {
             setViewMeet(true)
+            setViewBooks(false)
         } else {
             setViewMeet(false)
         }
@@ -48,11 +50,10 @@ export default function  Profile() {
             </div>
                 
                 <ul>
-                    <h2 onClick={books}>Books</h2>
+                    <h2 onClick={books}>My-Books</h2>
                     <h3 onClick={meet}>Meet</h3>
-                    <h4>Audio</h4>
                     <h5>Library</h5>
-                    <h6>favourite</h6>
+                    <h6>Profile</h6>
                 </ul>
             </div>
             <div className="aside-right">
@@ -67,9 +68,10 @@ export default function  Profile() {
                    <br />
                    <input type="text" aria-label="author-name" placeholder="Author Name" />
                    <br />
-                   <input type="file" aria-label="book-title" />
+                   <input type="file" aria-label="add-file" className="add-file" />
+                   <input type="file" aria-label="add-file" className="add-file2" />
                    <br />
-                   <input type="submit" />
+                   <button>Submit</button>
                </form>
             }
 

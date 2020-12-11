@@ -1,0 +1,64 @@
+@import '../index.scss';
+
+
+.contact {
+    width: 100%;
+    text-align: center;
+    font-family: $bodyfont2;
+    font-size: 19px;
+
+
+    h1 {
+        font-family: $headerfont;
+        font-weight: 300;
+        margin: 2rem 0 2rem 0;
+        font-weight: 500;
+    }
+    form  {
+        width: 100%;
+
+        .input {
+            margin-left: 5rem;
+            margin-bottom: 6rem;
+        }
+
+        input {
+            width: 30%;
+            padding: .5rem;
+            font-size: 18px;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .textarea {
+            margin: 2rem 0 1rem 0;
+            width: 70%;
+            min-height: 250px;
+            font-family: $bodyfont2;
+            font-size: 20px;
+            padding-left: 1rem;
+        }
+
+        button {
+            margin-right: 2rem;
+            max-height: 50px !important;
+            background-color: rgba(197, 135, 55, 0.733);
+            color: $color2;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: .5rem 1rem;
+            margin-top: 1rem;
+            border-radius: 2px;
+            border: none;
+            font-size: 17px;;
+            cursor: pointer;
+        }
+
+       
+    }
+
+    
+}

@@ -16,6 +16,7 @@ export default function Router() {
     const login = () => {
         if (!show) {
             setShow(true)
+            setShowSignup(false)
         } else {
             setShow(false)
         }
@@ -26,6 +27,7 @@ export default function Router() {
     const signup = () => {
         if (!showsignup) {
             setShowSignup(true)
+            setShow(false)
         } else {
             setShowSignup(false)
         }
@@ -96,6 +98,7 @@ export default function Router() {
                   <li><Link to="/">Home</Link></li>
                   <li><Link to="/dashboard">Dashboard</Link></li>
                   <li><Link to="/books">Books</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
 
