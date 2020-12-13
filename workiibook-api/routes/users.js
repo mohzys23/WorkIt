@@ -11,21 +11,35 @@ const User = require('../models/User');
  *  password: ""
  * }
  */
+//  userRouter.get('/', (req, res) =>{
+//      User.find({ })
+//      .then({data} () => {
+//          console.log('Data: ', data);
+//          res.json(data);
+//      })
+//  })
 
 userRouter.post('/signup', async (request, response) => {
-    const {fullName, email, userName, password} = request.body;
+    const UserData = request.body;
 
-    const user = new User({
-        fullName: fullName,
-        email: email,
-        userName: userName,
-    })
+    const newuser = new User(UserData);
+
+    newuser.save((error) => {
+        if (error) {
+            response.status(500).json({ msg: 'Sorry, internal server errors' });
+            return;
+        }
+        // SignupPost
+        return response.json({
+            msg: 'Your data has been saved!!!!!!'
+        });
+    });
 
 
-    const new_password = bcrypt.hashSync(password, 10);
-    user.password = new_password;
+    const new_password = bcrypt.hashSync(UserData.password, 10);
+    newuser.password = new_password;
 
-    await user.save()
+    await newuser.save()
 
     response.status(201).send({message: "User Created Successful"})
 })

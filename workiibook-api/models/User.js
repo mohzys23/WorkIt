@@ -2,15 +2,15 @@ const mongoose = require('mongoose');
 
 
 const userSchema = mongoose.Schema({
-    fullName: {
+    firstname: {
+        required: true,
+        type: String
+    },
+    lastname: {
         required: true,
         type: String
     },
     email: {
-        required: true,
-        type: String
-    },
-    userName: {
         required: true,
         type: String
     },
@@ -22,14 +22,14 @@ const userSchema = mongoose.Schema({
 
 
 
-userSchema.set('toJSON', {
-    transform: (document, returnedUser) => {
-        returnedUser.id = returnedUser._id.toString();
-        delete returnedUser._id;
-        delete returnedUser.__v;
-        delete returnedUser.password;
-    }
-})
+// userSchema.set('toJSON', {
+//     transform: (document, returnedUser) => {
+//         returnedUser.id = returnedUser._id.toString();
+//         delete returnedUser._id;
+//         delete returnedUser.__v;
+//         delete returnedUser.password;
+//     }
+// })
 
 
 const User = mongoose.model('User', userSchema);

@@ -19,6 +19,14 @@ router.use('/', (req, res) => {
     res.send('Api home router');
 });
 
+
+// router.post('/login', (req, res) => {
+//     console.log('Body: ', req.body);
+//     res.json({
+//         msg: 'We received your data'
+//     });
+// });
+
 // Users Route
 router.use('/users', usersRouter);
 

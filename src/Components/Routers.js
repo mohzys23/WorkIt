@@ -49,10 +49,10 @@ export default function Router() {
     //     setLoginPassword(event.target.value);
     // }
 
-   const onLogin = (event) => {
-       alert(`Login successful`);
-      event.preventDefault();
-   }
+//    const onLogin = (event) => {
+//        alert(`Login successful`);
+//       event.preventDefault();
+//    }
 
 
 //    const [signupfullname, setSignupFullname] = useState();
@@ -95,10 +95,38 @@ export default function Router() {
            email: email,
            password: password
        }
+
         // HTTP Verbs: GET, POST, PUT, DELETE, PATCH, etc
     axios.post("/workiibook-api/users/login", data)
     .then(response=> console.log(response.data))
     .catch(exception=> {
+      setEmailErrorMessage(exception.response.data.email);
+      setPasswordErrorMessage(exception.response.data.password);
+    })
+  
+   }
+
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+
+  const [firstnameErrorMessage ,setFirstNameErrorMessage] = useState("");
+  const [lastnameErrorMessage ,setLastNameErrorMessage] = useState("");
+   
+   const Signup  = (e) => {
+       e.preventDefault();
+       const data = {
+           firstname: firstname,
+           lastname: lastname,
+           email: email,
+           password: password
+       }
+       
+        // HTTP Verbs: GET, POST, PUT, DELETE, PATCH, etc
+    axios.post("/workiibook-api/users/signup", data)
+    .then(response=> console.log(response.data))
+    .catch(exception=> {
+      setFirstNameErrorMessage(exception.response.data.firstname);
+      setLastNameErrorMessage(exception.response.data.plastname);
       setEmailErrorMessage(exception.response.data.email);
       setPasswordErrorMessage(exception.response.data.password);
     })
@@ -153,7 +181,7 @@ export default function Router() {
                    </div>
                    <h6>Don't have an account? <span onClick={signup}>Signup</span></h6>
                    <br />
-                   <button onClick={onLogin}>Login</button>
+                   <button type="submit">Login</button>
                        
                </form>
 
@@ -168,17 +196,21 @@ export default function Router() {
             { showsignup &&  
 
             <div className="login-form">
-               <form method="post" action="">
+               <form onSubmit={Signup}>
                        <h4>Signup</h4>
                   
                    
-                   <input type="text" aria-label="Fullname" placeholder="Full Name" />
+                   <input type="text" aria-label="firstname" placeholder="Firstname" onChange={e=> setFirstName(e.target.value)} value={firstname}/>
+                   <p>{firstnameErrorMessage}</p>
                    <br />
-                   <input type="email" aria-label="email" placeholder="Email" />
+                   <input type="text" aria-label="lastname" placeholder="Lastname" onChange={e=> setLastName(e.target.value)} value={lastname}/>
+                   <p>{lastnameErrorMessage}</p>
                    <br />
-                   <input type="text" aria-label="username" placeholder="Username" />
+                   <input type="email" aria-label="email" placeholder="Email" onChange={e=> setEmail(e.target.value)} value={email}/>
+                   <p>{emailErrorMessage}</p>
                    <br />
-                   <input type="password" aria-label="password" placeholder="Password" />
+                   <input type="password" aria-label="password" placeholder="Password" onChange={e=> setPassword(e.target.value)} value={password}/>
+                   <p>{passwordErrorMessage}</p>
                    <br />
                    <div className="check-login">
                    <label><input type="checkbox" arial-label="checkbox" />Remember me</label>
