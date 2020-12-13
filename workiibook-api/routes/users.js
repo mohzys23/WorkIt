@@ -1,27 +1,58 @@
-// Require Express Router
-const Router = require('express').Router;
-// Require Controller
-//const controller = require('../controllers/users');
+const userRouter = require('express').Router();
+const bcrypt = require('bcrypt');
 
-// Instantiate Router
-const router = Router();
-
-// Get All users
-router.get('/', (res, req) => {
-        res.send('Welcome Moses');
-    });
+const User = require('../models/User');
 
 
-//Get users by ID one
-router.get('/:userID', (res, req) => {
-    res.send("Here is a user");
-});
+/**
+ * request.body = {
+ *  fullName: "",
+ *  email: "",
+ *  password: ""
+ * }
+ */
 
-// Create New users
-//router.post('/', controller.createUser);
+userRouter.post('/signup', async (request, response) => {
+    const {fullName, email, userName, password} = request.body;
 
-// Delete A users
-//router.delete('/:userID', controller.deleteUserById);
+    const user = new User({
+        fullName: fullName,
+        email: email,
+        userName: userName,
+    })
 
 
-module.exports = router; // Requir Express
+    const new_password = bcrypt.hashSync(password, 10);
+    user.password = new_password;
+
+    await user.save()
+
+    response.status(201).send({message: "User Created Successful"})
+})
+
+
+userRouter.post('/login', async (request, response) => {
+    console.log("User Data:", request.body)
+    await User.findOne({email: request.body.email}, (error, user)=> {
+        if (error) {
+            return response.status(500).send({error: "Internal Server Error"})
+        }
+
+        
+        if (!user) {
+            return response.status(401).send({email: "No user with that email"})
+        }
+
+        const valid = bcrypt.compareSync(request.body.password, user.password);
+
+        if (!valid) {
+            return response.status(401).send({password: "Invalid Password"})
+        }
+        
+        return response.status(200).send({message: "Login Successfull"})
+    })
+})
+
+
+
+module.exports = userRouter;

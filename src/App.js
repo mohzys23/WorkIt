@@ -1,10 +1,12 @@
+import React from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from './Components/Home';
-import Dashboard from './Components/Dashboard';
+import Home from './Pages/Home';
+import Dashboard from './Pages/Dashboard';
 import Routers from './Components/Routers';
-import Books from './Components/Books';
-import Contact from './Components/Contact';
+import Books from './Pages/Books';
+import Contact from './Pages/Contact';
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
                   <Route exact path="/dashboard" component={Dashboard} />
                   <Route  path="/" component={Home} />
                 </Switch>
+
+                <Footer />
       </Router>
 
       

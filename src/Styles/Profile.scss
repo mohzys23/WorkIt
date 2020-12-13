@@ -70,7 +70,7 @@
             color: $color2;
             font-weight: 900;
             text-transform: uppercase;
-            padding: .5rem;
+            padding: .5rem 1rem;
             margin-top: 1rem;
             border: 1px solid $color2;
         }
@@ -81,9 +81,12 @@
             input {
                 padding: .5em;
                 margin: .5rem 2rem;
+                border-radius: 5px;
+                border: none;
             }
             .add-file, .add-file2 {
-                width: 70%;
+                width: 65%;
+                border-radius: 5px;
                 border: 1px solid white;
                 margin-left: 2rem;
             }
@@ -91,7 +94,7 @@
             .add-file::before {
                     content: 'Select cover photo';
                     display: inline-block;
-                    padding: 5px 8px;
+                    padding: 4px 8px;
                     outline: none;
                     white-space: nowrap;
                     -webkit-user-select: none;
@@ -101,7 +104,7 @@
             .add-file2::before {
                     content: 'Select book file';
                     display: inline-block;
-                    padding: 5px 8px;
+                    padding: 4px 8px;
                     outline: none;
                     white-space: nowrap;
                     -webkit-user-select: none;
@@ -111,7 +114,7 @@
 
             button {
                 margin-left: 2rem;
-                border-radius: 1px;
+                border-radius: 5px;
             }
         }
     }
