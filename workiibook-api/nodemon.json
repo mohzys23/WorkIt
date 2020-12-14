@@ -1,5 +1,5 @@
 {
     "env": {
-        "MONGO_URI": "mongodb+srv://workiibookdb:Ebubeubah1@cluster0.9aijd.mongodb.net/workiibookdb?retryWrites=true&w=majority"
+        "MONGO_URI": "mongodb+srv://workiibook-api-db:Ebubeubah1@cluster0.9aijd.mongodb.net/workiibook-api-db?retryWrites=true&w=majority"
     }
 }
