@@ -12,8 +12,9 @@
          width: 20%;
          text-transform: uppercase;
 
-         h1 {
-             margin: 1.7rem 0 1.6rem 3rem;
+         img {
+             width: 100%;
+             margin: -1rem 0 -1rem 1rem;
              font-size: 27px;
              
          }
@@ -95,7 +96,7 @@
          color: $color1;
          position: absolute;
          width: 30%;
-         left: 58rem;
+         left: 56rem;
          text-align: center;
          font-family: $bodyfont;
          background-color: rgba(55, 55, 221, 0.733);
@@ -129,8 +130,12 @@
                 
              }
 
+             input::placeholder {
+                 color: white;
+             }
+
              input:hover {
-                 border-bottom: 1px solid rgba(55, 55, 221, 0.733);
+                 border-bottom: 1px solid rgba(252, 252, 255, 0.733);
              }
 
              button {
@@ -177,7 +182,7 @@
             span {
                 cursor: pointer;
                 padding-left: .2rem;
-                color: rgba(230, 230, 245, 0.884);
+                color: rgb(255, 255, 255);
             }
         }
      }
