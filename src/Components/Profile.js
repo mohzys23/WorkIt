@@ -3,6 +3,7 @@ import profileimg from '../Assets-books/Moses.jpg';
 import '../Styles/Profile.scss';
 import axios from 'axios';
 import {My_book} from '../data/books';
+import { Link } from "react-router-dom";
 
 
 export default function  Profile() {
@@ -99,7 +100,7 @@ export default function  Profile() {
             <div className="aside-left">
             <div className="profile-info">
               <img src={profileimg} alt="" />
-                <h1>{}</h1>
+                <h1>Moses Ubah</h1>
             </div>
                 
                 <ul>
@@ -146,7 +147,7 @@ export default function  Profile() {
                                 </div>
                                 <div className="section-text">
                                     <h5>{item.title}</h5>
-                                    <button>Open Book</button>
+                                    <button><Link to="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U" target="blank">Open Book</Link></button>
                                 </div>
                             </div>
                      </div>
