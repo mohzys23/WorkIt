@@ -29,7 +29,7 @@ export default function TopAuthors() {
                                 <div className="section-text">
                                     <h5>{item.title}</h5>
                                     <h6>{item.author}</h6>
-                                    <button><Link to={item.url}>Get Book</Link></button>
+                                    <button><Link to={item.url} target="blank"> Get Book</Link></button>
                                 </div>
                             </div>
                      </div>
