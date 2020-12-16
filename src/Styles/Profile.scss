@@ -54,7 +54,7 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-
+            
         }
 
         p {
@@ -70,7 +70,7 @@
             color: $color2;
             font-weight: 900;
             text-transform: uppercase;
-            padding: .5rem;
+            padding: .5rem 1rem;
             margin-top: 1rem;
             border: 1px solid $color2;
         }
@@ -79,8 +79,42 @@
             width: 50%;
 
             input {
-                padding: .4em;
-                margin: .5rem 2rem;
+                padding: .5em;
+                margin: .1rem 2rem;
+                border-radius: 5px;
+                border: none;
+            }
+            .add-file, .add-file2 {
+                width: 65%;
+                border-radius: 5px;
+                border: 1px solid white;
+                margin-left: 2rem;
+            }
+
+            .add-file::before {
+                    content: 'Select cover photo';
+                    display: inline-block;
+                    padding: 4px 8px;
+                    outline: none;
+                    white-space: nowrap;
+                    -webkit-user-select: none;
+                    font-weight: 700;
+                    font-size: 10pt;
+            }
+            .add-file2::before {
+                    content: 'Select book file';
+                    display: inline-block;
+                    padding: 4px 8px;
+                    outline: none;
+                    white-space: nowrap;
+                    -webkit-user-select: none;
+                    font-weight: 700;
+                    font-size: 10pt;
+            }
+
+            button {
+                margin-left: 2rem;
+                border-radius: 5px;
             }
         }
     }
@@ -92,5 +126,29 @@
          align-self: center;
          position: absolute;
          bottom: -5rem;
+
+         .books-box {
+            overflow-x: scroll;
+             width: 100%;
+             display: flex;
+             text-align: center;
+         }
+
+
+         img {
+             width: 100px;
+             margin: .7rem 1rem;
+             border: 1px solid  rgba(197, 135, 55, 0.733);
+
+         }
+
+         button {
+             margin: 1rem 0 1rem;
+             padding: .2rem .4rem;
+             background-color: rgba(197, 135, 55, 0.733);
+             border: none;
+             border-radius: 3px;
+             color: $color2;
+         }
     }
 }
