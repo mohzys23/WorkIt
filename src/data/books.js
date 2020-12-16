@@ -58,7 +58,8 @@ export const books = [
         img: img8,
         title: 'Oliver Twist',
         author: 'Charles Dickens',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U',
+
     },
     {
         img: img9,
@@ -79,7 +80,7 @@ export const Topbooks = [
         img: img8,
         title: 'Oliver Twist',
         author: 'Charles Dickens',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U',
     },
     {
         img: img3,
@@ -125,6 +126,7 @@ export const My_book = [
         title: 'Oliver Twist',
         author: 'Charles Dickens',
         url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U',
+
     },
     
 ]
