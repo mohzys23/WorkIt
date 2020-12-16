@@ -54,7 +54,7 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-
+            
         }
 
         p {
@@ -80,7 +80,7 @@
 
             input {
                 padding: .5em;
-                margin: .5rem 2rem;
+                margin: .1rem 2rem;
                 border-radius: 5px;
                 border: none;
             }
@@ -126,5 +126,29 @@
          align-self: center;
          position: absolute;
          bottom: -5rem;
+
+         .books-box {
+            overflow-x: scroll;
+             width: 100%;
+             display: flex;
+             text-align: center;
+         }
+
+
+         img {
+             width: 100px;
+             margin: .7rem 1rem;
+             border: 1px solid  rgba(197, 135, 55, 0.733);
+
+         }
+
+         button {
+             margin: 1rem 0 1rem;
+             padding: .2rem .4rem;
+             background-color: rgba(197, 135, 55, 0.733);
+             border: none;
+             border-radius: 3px;
+             color: $color2;
+         }
     }
 }

@@ -2,7 +2,7 @@
   "name": "workiibook-api",
   "version": "1.0.0",
   "description": "Workiibook API database",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "node .",
     "dev": "nodemon ."

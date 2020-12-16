@@ -3,33 +3,116 @@ import img2 from '../Assets-books/Criticalthinking.jpg';
 import img3 from '../Assets-books/Drawhumanbody.jpg';
 import img4 from '../Assets-books/foodlab.jpg';
 import img5 from '../Assets-books/morning.jpg';
+import img6 from '../Assets-books/aliceinwonderland.jpg';
+import img7 from '../Assets-books/beautyandthebeast.jpg';
+import img8 from '../Assets-books/olivertwist.jpg';
+import img9 from '../Assets-books/tomsawyer.jpg';
+import img10 from '../Assets-books/peerofschoolgitl.jpg';
+
+
 
 export const books = [
     {
-
-        id: 1,
         img: img1,
-        title: 'Being mortal',
+        title: 'Being Mortal',
         author: 'Moses Ubah',
+        url: ''
     },
     {
         img: img2,
-        title: 'Critical thinking',
+        title: 'Critical Thinking',
         author: 'Moses Ubah',
+        url: '',
     },
     {
         img: img3,
-        title: 'Draw human body',
+        title: 'Draw Human Body',
         author: 'Moses Ubah',
+        url: '',
     },
     {
         img: img4,
-        title: 'Food lab',
+        title: 'Food Lab',
         author: 'Moses Ubah',
+        url: '',
     },
     {
         img: img5,
-        title: 'Miracle Morningl',
+        title: 'Miracle Morning',
         author: 'Moses Ubah',
+        url: '',
     },
+    {
+        img: img6,
+        title: 'Alice in Wonderland',
+        author: 'Lewis Carroll',
+        url: '',
+    },
+    {
+        img: img7,
+        title: 'Beauty and the Beast',
+        author: 'Anonymous',
+        url: '',
+    },
+    {
+        img: img8,
+        title: 'Oliver Twist',
+        author: 'Charles Dickens',
+        url: '',
+    },
+    {
+        img: img9,
+        title: 'Tommy Sawyer',
+        author: 'Mark Twain',
+        url: '',
+    },
+    {
+        img: img10,
+        title: 'A Pair of Schoolgirls',
+        author: 'Angela Brazil',
+        url: '',
+    },
+]
+
+export const Topbooks = [
+     {
+        img: img8,
+        title: 'Oliver Twist',
+        author: 'Charles Dickens',
+        url: '',
+    },
+    {
+        img: img3,
+        title: 'Draw Human Body',
+        author: 'Moses Ubah',
+        url: '',
+    },
+    {
+        img: img7,
+        title: 'Beauty and the Beast',
+        author: 'Anonymous',
+        url: '',
+    },
+    {
+        img: img6,
+        title: 'Alice in Wonderland',
+        author: 'Lewis Carroll',
+        url: '',
+    },
+]
+
+export const My_book = [
+    {
+        img: img6,
+        title: 'Alice in Wonderland',
+        author: 'Lewis Carroll',
+        url: '',
+    },
+     {
+        img: img4,
+        title: 'Food Lab',
+        author: 'Moses Ubah',
+        url: '',
+    },
+    
 ]

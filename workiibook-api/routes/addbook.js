@@ -1,5 +1,4 @@
-const signupRouter = require('express').Router();
-// const bcrypt = require('bcrypt');
+const addbookRouter = require('express').Router();
 
 const User = require('../models/User');
 
@@ -12,7 +11,7 @@ const User = require('../models/User');
  * }
  */
 
-signupRouter.get('/', async (request, response, next) => {
+addbookRouter.get('/', async (request, response, next) => {
 
 // check if user already exist 
 
@@ -26,20 +25,20 @@ signupRouter.get('/', async (request, response, next) => {
   
  // response.json(users.map(user => user.toJSON()))
   
-  response.json("Nothing to get for now only posts are recieved ")
+  response.json("No book aded yet ")
 })
 
 
 
-signupRouter.post('/signup', async (request, response) => {
+addbookRouter.post('/signup', async (request, response) => {
 
-     const {firstname, email, lastname, password} = request.body;
+    const {title, author, bookcover, bookfile} = request.body;;
 
      const user = new User({
-        firstname: firstname,
-        lastname: lastname,
-        email: email,
-        password: password,
+        title: title,
+        authoe: author,
+        bookcover: bookcover,
+        bookfile: bookfile,
         
     })
 
@@ -58,9 +57,6 @@ signupRouter.post('/signup', async (request, response) => {
 
 
 
-    // const new_password = bcrypt.hashSync(password, 10);
-    // user.password = new_password;
-
     console.log("Signup data saved");
 
 })
@@ -68,5 +64,4 @@ signupRouter.post('/signup', async (request, response) => {
 
 
 
-
-module.exports = signupRouter;
+module.exports = addbookRouter;

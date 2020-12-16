@@ -8,8 +8,6 @@ import axios from 'axios';
 import Logo from '../Assets/logo.png';
 
 
-
-
 export default function Router() {
 
 
@@ -49,9 +47,15 @@ export default function Router() {
     //     setLoginPassword(event.target.value);
     // }
 
-//    const onLogin = (event) => {
-//        alert(`Login successful`);
-//       event.preventDefault();
+//    const Message = (event) => {
+//        if (Signup) {
+//            alert(`Login successful`);
+//           event.preventDefault();
+//        } else {
+//            alert(`Please signup`);
+//            event.preventDefault();
+//        }
+       
 //    }
 
 
@@ -97,14 +101,23 @@ export default function Router() {
        }
 
         // HTTP Verbs: GET, POST, PUT, DELETE, PATCH, etc
-    axios.post("/workiibook-api/routes/login", data)
+    axios.post('http://localhost:5000/login/login', data)
     .then(response=> console.log(response.data))
     .catch(exception=> {
       setEmailErrorMessage(exception.response.data.email);
       setPasswordErrorMessage(exception.response.data.password);
     })
-  
+  //.then(function (response) { 
+//        console.log(response.data)
+//        const person = {
+//             name: "Obaseki Nosa",
+//             location: "Lagos",
+//         }
+//         window.localStorage.setItem('user', JSON.stringify(person));
+//    })
    }
+
+   
 
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -114,7 +127,7 @@ export default function Router() {
    
    const Signup  = (e) => {
        e.preventDefault();
-       const data = {
+      const data = {
            firstname: firstname,
            lastname: lastname,
            email: email,
@@ -122,7 +135,7 @@ export default function Router() {
        }
        
         // HTTP Verbs: GET, POST, PUT, DELETE, PATCH, etc
-    axios.post("/workiibook-api/routes/signup", data)
+    axios.post('http://localhost:5000/signup/signup', data)
     .then(response=> console.log(response.data))
     .catch(exception=> {
       setFirstNameErrorMessage(exception.response.data.firstname);
@@ -132,6 +145,8 @@ export default function Router() {
     })
   
    }
+
+   
     return(
         <div className="routers">
 
@@ -218,7 +233,7 @@ export default function Router() {
                    <h6>Have an account? <span onClick={login}>Login</span></h6>
                    {show && login}
                    <br />
-                   <button type="submit">Signup</button>
+                   <button>Signup</button>
                        
                </form>
             </div>  }

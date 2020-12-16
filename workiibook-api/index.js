@@ -6,11 +6,12 @@ const bodyParser = require('body-parser')
 
 const loginRouter = require('./routes/login')
 const signupRouter = require('./routes/signup')
+const addbookRouter = require('./routes/addbook')
 const HomeRouter = require('./routes/home')
 
 const app = express()
 // Declear you port
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5000;
 
 
 const cors = require('cors')
@@ -36,6 +37,9 @@ app.use('/signup', signupRouter)
 
 
 app.use('/login', loginRouter)
+
+
+app.use('/addbook', addbookRouter)
 
 app.use('/', HomeRouter)
 

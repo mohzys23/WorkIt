@@ -5,7 +5,7 @@ import '../Styles/TopAuthors.scss';
 // import img3 from '../Assets-books/Drawhumanbody.jpg';
 // import img4 from '../Assets-books/foodlab.jpg';
 // import img5 from '../Assets-books/morning.jpg';
-import {books} from '../data/books';
+import {Topbooks} from '../data/books';
 
 
 export default function TopAuthors() {
@@ -16,7 +16,7 @@ export default function TopAuthors() {
                <div className="topauthors2">
 
 
-        {books.map((item) => {
+        {Topbooks.map((item) => {
             return(
                
                    <div className="card-box">

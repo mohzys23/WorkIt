@@ -6,12 +6,19 @@ const User = require('../models/User');
 
 loginRouter.post('/login', async (request, response) => {
 
-    console.log("User Data:", request.body)
+console.log(request.body.data);
+console.log(request.body.data['email']);
+
+ const { email, new_data} = request.body.data;
+ console.log(email)
+ console.log(new_data)
+ const body = request.body.data
 
 
-    const user = await User.findOne({ email: request.body.email});
-    
-  const passwordCorrect = user.password === request.body.password ? user.password : false
+
+  const user = await User.findOne({ email: body['email']});
+
+  const passwordCorrect = user.password === body['password'] ? user.password : false
 
  
   
@@ -29,12 +36,6 @@ loginRouter.post('/login', async (request, response) => {
       .status(200)
       .send({  user_info: user })
       
-
-
-
-
-
-
 
 })
 
