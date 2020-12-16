@@ -6,6 +6,7 @@ import '../Styles/TopAuthors.scss';
 // import img4 from '../Assets-books/foodlab.jpg';
 // import img5 from '../Assets-books/morning.jpg';
 import {Topbooks} from '../data/books';
+import { Link } from "react-router-dom";
 
 
 export default function TopAuthors() {
@@ -28,7 +29,7 @@ export default function TopAuthors() {
                                 <div className="section-text">
                                     <h5>{item.title}</h5>
                                     <h6>{item.author}</h6>
-                                    <button>Get Book</button>
+                                    <button><Link to={item.url}>Get Book</Link></button>
                                 </div>
                             </div>
                      </div>

@@ -84,6 +84,11 @@
                     font-size: 11px;
                     font-weight: 900;
                     cursor: pointer;
+
+                    a {
+                        text-decoration: none;
+                        color: $color2;
+                    }
                 }
 
                 button:hover {
