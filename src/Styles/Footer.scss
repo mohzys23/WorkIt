@@ -50,7 +50,7 @@
 
             button {
                 width: 20%;
-                font-size: 17px;
+                font-size: 15px;
                 margin: 3rem 3rem;
                 padding: .4rem 0;
                 text-transform: uppercase;
@@ -60,11 +60,12 @@
                 border: 1px solid rgba(255, 167, 52, 0.877);
                 background-color: rgba(32, 32, 32, 0.274);
                 border-radius: 20px;
+                outline: none;
 
             }
 
             button:hover {
-            background-color: rgb(216, 122, 7);
+            background-color: rgba(255, 167, 52, 0.877);
 
             }
         }

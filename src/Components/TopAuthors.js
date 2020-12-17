@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 export default function TopAuthors() {
     return(
         <div className="topauthors">
-            <h1>Top Authors</h1>
+            <h1>Top Books</h1>
 
                <div className="topauthors2">
 
