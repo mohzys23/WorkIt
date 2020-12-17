@@ -10,30 +10,29 @@ const userSchema = new mongoose.Schema({
         required: true,
         type: String
     },
-    bookcover: {
-        required: true,
-        type: String
-    },
-    bookfile: {
-        required: true,
-        type: String
-    }
+    // bookcover: {
+    //     required: true,
+    //     type: String
+    // },
+    // bookfile: {
+    //     required: true,
+    //     type: String
+    // }
 })
 
 
 
 userSchema.set('toJSON', {
     transform: (document, returnedUser) => {
-        returnedUser.id = returnedUser._id.toString();
+       returnedUser.id = returnedUser._id.toString();
         delete returnedUser._id;
         delete returnedUser.__v;
-        delete returnedUser.password;
     }
 })
 
 
-const User = mongoose.model('Addbook', userSchema);
+const Book = mongoose.model('Addbook', userSchema);
 
 
 
-module.exports = User;
+module.exports = Book;

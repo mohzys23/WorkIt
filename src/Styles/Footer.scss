@@ -2,7 +2,7 @@
 
 .footer {
     width: 100%;
-    background: rgba(55, 55, 221, 0.733);
+    background-color: rgba(32, 32, 32, 0.733);
     color: $color2;
     font-family: $bodyfont2;
 
@@ -57,8 +57,8 @@
                 cursor: pointer;
                 font-weight: 900;
                 color: $color2;
-                border: none;
-                background-color: rgb(219, 141, 45);
+                border: 1px solid rgba(255, 167, 52, 0.877);
+                background-color: rgba(32, 32, 32, 0.274);
                 border-radius: 20px;
 
             }

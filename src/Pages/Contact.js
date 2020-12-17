@@ -2,6 +2,8 @@
 
 import React from "react";
 import '../Styles/contact.scss';
+
+
 export default class MyForm extends React.Component {
   constructor(props) {
     super(props);

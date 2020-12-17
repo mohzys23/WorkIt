@@ -20,7 +20,7 @@ export default function TopAuthors() {
         {Topbooks.map((item) => {
             return(
                
-                   <div className="card-box">
+                 <div className="card-box">
                        <div className="authors-card">
                             <div className="authors-sections" >
                                 <div className="section-img">
@@ -34,6 +34,8 @@ export default function TopAuthors() {
                             </div>
                      </div>
                    </div>
+               
+                   
                
             )
         })}

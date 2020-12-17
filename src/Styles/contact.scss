@@ -36,26 +36,30 @@
         }
 
         .textarea {
-               width: 40%;
-    border: 1px solid grey;
-    font-size: 20px;
-    padding: .4em;
-    border-radius: 5px;
-    outline: none;
-      }
+                width: 40%;
+                border: 1px solid grey;
+                font-size: 20px;
+                padding: .4em;
+                border-radius: 5px;
+                outline: none;
+        }
 
         button {
             margin: 1rem 0 1rem;
             max-height: 50px !important;
-            border: 2px solid #db8d2d;
+            border: 1px solid rgba(255, 167, 52, 0.877);
             background-color: white;
             color: $color1;
             font-weight: 300;
             text-transform: uppercase;
-            padding: .5rem 1rem;
-            border-radius: 5px;
-            font-size: 17px;;
+            padding: .4rem 1.4rem;
+            border-radius: 20px;
+            font-size: 15px;;
             cursor: pointer;
+        }
+        button:hover {
+            background-color: #fd9413;
+            color: $color2;
         }
 
        
