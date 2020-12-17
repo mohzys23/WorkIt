@@ -58,7 +58,8 @@ export const books = [
         img: img8,
         title: 'Oliver Twist',
         author: 'Charles Dickens',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U',
+
     },
     {
         img: img9,
@@ -79,7 +80,7 @@ export const Topbooks = [
         img: img8,
         title: 'Oliver Twist',
         author: 'Charles Dickens',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U',
     },
     {
         img: img3,
@@ -99,6 +100,12 @@ export const Topbooks = [
         author: 'Lewis Carroll',
         url: '',
     },
+     {
+        img: img9,
+        title: 'Tommy Sawyer',
+        author: 'Mark Twain',
+        url: '',
+    },
 ]
 
 export const My_book = [
@@ -106,13 +113,29 @@ export const My_book = [
         img: img6,
         title: 'Alice in Wonderland',
         author: 'Lewis Carroll',
-        url: '',
+        url: '#',
     },
      {
         img: img4,
         title: 'Food Lab',
         author: 'Moses Ubah',
-        url: '',
+        url: '#',
+    },
+    {
+        img: img8,
+        title: 'Oliver Twist',
+        author: 'Charles Dickens',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U',
+
     },
     
+]
+
+export const Recently_viewed = [
+     {
+        img: img8,
+        title: 'Oliver Twist',
+        author: 'Charles Dickens',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U',
+    },
 ]

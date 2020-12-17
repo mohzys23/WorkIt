@@ -99,7 +99,7 @@
          left: 56rem;
          text-align: center;
          font-family: $bodyfont;
-         background-color: rgba(55, 55, 221, 0.733);
+         background-image: url(../Assets-books/formbg.jpg);
          background-size: cover;
          border-radius: 10px;
          border: 1px solid $color1;
@@ -139,21 +139,21 @@
              }
 
              button {
-                 padding: .5rem 1rem;
+                 padding: .5rem 1.5rem;
                  color: white;
-                 background-color: rgba(173, 216, 230, 0.397);
+                 background-color:rgba(32, 32, 32, 0.733);
                  text-transform: uppercase;
                  font-size: 12px;
                  margin: .8rem 0 1.7rem;
-                 border-radius: 4px;
                  cursor: pointer;
-                 border-radius: 5px;
-                 border: none;
+                 border-radius: 20px;
+                 border: 1px solid rgb(248, 156, 44);
+                 outline: none;
              }
 
              button:hover {
                  color: $color2;
-                 background-color: rgba(61, 61, 233, 0.192);
+                 background-color:  rgb(192, 132, 59);
              }
          }
 

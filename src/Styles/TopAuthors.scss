@@ -29,7 +29,7 @@
     .card-box {
         width: 30%;
         margin-top: 2rem;
-        color: $color2;
+        color: $color1;
         
 
         .authors-card {
@@ -37,8 +37,12 @@
             width: 100%;
             margin: 2rem 0;
             border-radius: 20px;
-            background-color: rgba(75, 75, 250, 0.733);
-          
+            border: 1px solid rgba(32, 32, 32, 0.733);
+            transition: 2s;
+        }
+
+        .authors-card:hover {
+            transform: scale(1.5);
         }
 
         .authors-sections {
@@ -46,10 +50,10 @@
             display: flex;
 
             .section-img {
-                width: 50%;
+                width: 40%;
 
                 img {
-                    width: 70%;
+                    width: 80%;
                     padding: 1rem 0 1rem 1rem;
                     height: 170px;
                 }
@@ -84,6 +88,11 @@
                     font-size: 11px;
                     font-weight: 900;
                     cursor: pointer;
+
+                    a {
+                        text-decoration: none;
+                        color: $color2;
+                    }
                 }
 
                 button:hover {

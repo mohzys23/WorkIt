@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import profileimg from '../Assets-books/Moses.jpg';
 import '../Styles/Profile.scss';
 import axios from 'axios';
-import {My_book} from '../data/books';
+import {My_book, /*Recently_viewed */ } from '../data/books';
+import { Link } from "react-router-dom";
 
 
 export default function  Profile() {
@@ -17,7 +18,7 @@ export default function  Profile() {
 
 
     // Books
-    const [viewbooks, setViewBooks] = useState(false);
+    const [viewbooks, setViewBooks] = useState(true);
      
     const mybooks = () => {
         if (!viewbooks) {
@@ -51,21 +52,21 @@ export default function  Profile() {
    
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  const [bookcover, setBookCover] = useState("");
-  const [bookfile, setBookFile] = useState("");
+//   const [bookcover, setBookCover] = useState("");
+//   const [bookfile, setBookFile] = useState("");
 
   const [titleErrorMessage ,setTitleErrorMessage] = useState("");
   const [authorErrorMessage ,setAuthorErrorMessage] = useState("");
-  const [bookcoverErrorMessage ,setBookCoverErrorMessage] = useState("");
-  const [bookfileErrorMessage ,setBookFileErrorMessage] = useState("");
+//   const [bookcoverErrorMessage ,setBookCoverErrorMessage] = useState("");
+//   const [bookfileErrorMessage ,setBookFileErrorMessage] = useState("");
    
    const Addbook  = (e) => {
        e.preventDefault();
       const data = {
            title: title,
            author: author,
-           bookcover: bookcover,
-           bookfile: bookfile,
+        //    bookcover: bookcover,
+        //    bookfile: bookfile,
        }
        
         // HTTP Verbs: GET, POST, PUT, DELETE, PATCH, etc
@@ -74,8 +75,8 @@ export default function  Profile() {
     .catch(exception=> {
       setTitleErrorMessage(exception.response.data.firstname);
       setAuthorErrorMessage(exception.response.data.plastname);
-      setBookCoverErrorMessage(exception.response.data.email);
-      setBookFileErrorMessage(exception.response.data.password);
+    //   setBookCoverErrorMessage(exception.response.data.email);
+    //   setBookFileErrorMessage(exception.response.data.password);
     })
   
    }
@@ -99,7 +100,7 @@ export default function  Profile() {
             <div className="aside-left">
             <div className="profile-info">
               <img src={profileimg} alt="" />
-                <h1>{}</h1>
+                <h1>Moses Ubah</h1>
             </div>
                 
                 <ul>
@@ -110,7 +111,32 @@ export default function  Profile() {
             <div className="aside-right">
                 <div className="add-books-right">
                     <p>Recently Viewed</p>
+                    {/* {Recently_viewed.map((item) => (
+
+                        <div className="recent">
+                        <div className="books-box">
+                        <div className="card-box">
+                       <div className="authors-card">
+                            <div className="authors-sections">
+                                <div className="section-img">
+                                    <img src={item.img} alt="" />
+                                </div>
+                                <div className="section-text">
+                                    <h5>{item.title}</h5>
+                                    <button><Link to="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U" target="blank">Open Book</Link></button>
+                                </div>
+                            </div>
+                     </div>
+                   
+                        </div>
+
+                        </div>
+                         </div>
+                    ))} */}
+
                     <button onClick={add}>Add Book +</button>
+
+                    {}
                 </div>
             
             { addbook && 
@@ -121,11 +147,11 @@ export default function  Profile() {
                    <input type="text" aria-label="author-name" placeholder="Author Name" onChange={e=> setAuthor(e.target.value)} value={author}/>
                     <p>{authorErrorMessage}</p>
                   
-                   <input type="file" aria-label="add-file" className="add-file" onChange={e=> setBookCover(e.target.value)} value={bookcover}/>
-                    <p>{bookcoverErrorMessage}</p>
-                   <input type="file" aria-label="add-file" className="add-file2" onChange={e=> setBookFile(e.target.value)} value={bookfile}/>
-                    <p>{bookfileErrorMessage}</p>
-                  
+                   <input type="file" aria-label="add-file" className="add-file" /*onChange={e=> setBookCover(e.target.value)} value={bookcover} */  />
+                    {/* <p>{bookcoverErrorMessage}</p> */}
+                   <input type="file" aria-label="add-file" className="add-file2" /*onChange={e=> setBookFile(e.target.value)} value={bookfile}*/ />
+                    {/* <p>{bookfileErrorMessage}</p>
+                   */}
                    <button>Add book</button>
                </form>
             }
@@ -146,7 +172,7 @@ export default function  Profile() {
                                 </div>
                                 <div className="section-text">
                                     <h5>{item.title}</h5>
-                                    <button>Open Book</button>
+                                    <button><Link to="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U">Open Book</Link></button>
                                 </div>
                             </div>
                      </div>

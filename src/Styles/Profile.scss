@@ -31,6 +31,7 @@
 
         ul {
             margin: 2rem 0 2rem 5rem;
+            cursor: pointer;
 
             h2, h3, h4, h5, h6 {
                 padding-top: 2rem;
@@ -42,7 +43,7 @@
 
     .aside-right {
         width: 75%;
-        background-color: rgba(55, 55, 221, 0.733);
+        background-color: rgba(32, 32, 32, 0.733);
         height: 50vh;
         margin-left: 2.5%;
         margin-top: 2.5vh;
@@ -72,7 +73,8 @@
             text-transform: uppercase;
             padding: .5rem 1rem;
             margin-top: 1rem;
-            border: 1px solid $color2;
+             border: 1px solid rgba(255, 167, 52, 0.877);
+            cursor: pointer;
         }
 
         form {
@@ -115,6 +117,7 @@
             button {
                 margin-left: 2rem;
                 border-radius: 5px;
+                cursor: pointer;
             }
         }
     }
@@ -137,6 +140,7 @@
 
          img {
              width: 100px;
+             height: 150px;
              margin: .7rem 1rem;
              border: 1px solid  rgba(197, 135, 55, 0.733);
 
@@ -146,9 +150,20 @@
              margin: 1rem 0 1rem;
              padding: .2rem .4rem;
              background-color: rgba(197, 135, 55, 0.733);
-             border: none;
+              border: 1px solid rgba(255, 167, 52, 0.877);
              border-radius: 3px;
              color: $color2;
+             cursor: pointer;
+
+             a {
+                 text-decoration: none;
+                 color: $color2;
+             }
+         }
+
+         button:hover {
+              background-color: rgb(216, 122, 7);
          }
     }
+    
 }

@@ -6,12 +6,13 @@ import '../Styles/TopAuthors.scss';
 // import img4 from '../Assets-books/foodlab.jpg';
 // import img5 from '../Assets-books/morning.jpg';
 import {Topbooks} from '../data/books';
+import { Link } from "react-router-dom";
 
 
 export default function TopAuthors() {
     return(
         <div className="topauthors">
-            <h1>Top Authors</h1>
+            <h1>Top Books</h1>
 
                <div className="topauthors2">
 
@@ -19,7 +20,7 @@ export default function TopAuthors() {
         {Topbooks.map((item) => {
             return(
                
-                   <div className="card-box">
+                 <div className="card-box">
                        <div className="authors-card">
                             <div className="authors-sections" >
                                 <div className="section-img">
@@ -28,11 +29,13 @@ export default function TopAuthors() {
                                 <div className="section-text">
                                     <h5>{item.title}</h5>
                                     <h6>{item.author}</h6>
-                                    <button>Get Book</button>
+                                    <button><Link to={item.url} target="blank"> Get Book</Link></button>
                                 </div>
                             </div>
                      </div>
                    </div>
+               
+                   
                
             )
         })}
