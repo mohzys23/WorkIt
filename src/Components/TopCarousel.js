@@ -10,7 +10,7 @@ import '../Styles/Topcarousel.scss';
 export default function TopCarousel() {
     return(
        <Carousel>
-                <div className="img-box">
+                {/* <div className="img-box">
                     <img src={Img} alt="" />
                    
                 </div>
@@ -20,7 +20,7 @@ export default function TopCarousel() {
                 </div>
                 <div className="img-box">
                     <img src={Img3} alt="" />
-                </div>
+                </div> */}
       </Carousel>
     );
 }
