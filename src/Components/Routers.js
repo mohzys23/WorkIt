@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faSearch } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import Logo from '../Assets/logo.png';
+// import { useHistory } from "react-router-dom";
 
 
 export default function Router() {
@@ -100,6 +101,10 @@ export default function Router() {
            password: password
        }
 
+       if (Login === true) {
+           alert('Success');
+       }
+
         // HTTP Verbs: GET, POST, PUT, DELETE, PATCH, etc
     axios.post('http://localhost:5000/login/login', data)
     .then(response=> console.log(response.data))
@@ -133,7 +138,8 @@ export default function Router() {
            email: email,
            password: password
        }
-       
+
+      
         // HTTP Verbs: GET, POST, PUT, DELETE, PATCH, etc
     axios.post('http://localhost:5000/signup/signup', data)
     .then(response=> console.log(response.data))
@@ -181,22 +187,20 @@ export default function Router() {
             
             <div className="login-form">
                <form onSubmit={Login}>
-                       <h4>Login</h4>
-                  
+                    <h4>Login</h4>
+                        <input type="email" aria-label="Email" placeholder="Email" onChange={e=> setEmail(e.target.value)} value={email} />
+                           <p>{emailErrorMessage}</p>
                    
-                   <input type="email" aria-label="Email" placeholder="Email" onChange={e=> setEmail(e.target.value)} value={email} />
-                   <p>{emailErrorMessage}</p>
-                   
-                   <br />
-                   <input type="password" aria-label="Password" placeholder="Password" onChange={e=> setPassword(e.target.value)} value={password} />
-                   <p>{passwordErrorMessage}</p>
-                   <br />
-                   <div className="check-login">
-                   <label><input type="checkbox" arial-label="checkbox" />Remember me</label>
+                           <br />
+                        <input type="password" aria-label="Password" placeholder="Password" onChange={e=> setPassword(e.target.value)} value={password} />
+                         <p>{passwordErrorMessage}</p>
+                         <br />
+                        <div className="check-login">
+                     <label><input type="checkbox" arial-label="checkbox" />Remember me</label>
                    </div>
                    <h6>Don't have an account? <span onClick={signup}>Signup</span></h6>
                    <br />
-                   <button type="submit">Login</button>
+                   <button>Login</button>
                        
                </form>
 
@@ -242,3 +246,4 @@ export default function Router() {
         </div>
     );
 }
+

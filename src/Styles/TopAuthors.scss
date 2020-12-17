@@ -29,7 +29,7 @@
     .card-box {
         width: 30%;
         margin-top: 2rem;
-        color: $color2;
+        color: $color1;
         
 
         .authors-card {
@@ -37,8 +37,12 @@
             width: 100%;
             margin: 2rem 0;
             border-radius: 20px;
-            background-color: rgba(75, 75, 250, 0.733);
-          
+            border: 1px solid rgba(32, 32, 32, 0.733);
+            transition: 2s;
+        }
+
+        .authors-card:hover {
+            transform: scale(1.5);
         }
 
         .authors-sections {

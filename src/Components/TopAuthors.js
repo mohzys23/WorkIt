@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 export default function TopAuthors() {
     return(
         <div className="topauthors">
-            <h1>Top Authors</h1>
+            <h1>Top Books</h1>
 
                <div className="topauthors2">
 
@@ -20,7 +20,7 @@ export default function TopAuthors() {
         {Topbooks.map((item) => {
             return(
                
-                   <div className="card-box">
+                 <div className="card-box">
                        <div className="authors-card">
                             <div className="authors-sections" >
                                 <div className="section-img">
@@ -34,6 +34,8 @@ export default function TopAuthors() {
                             </div>
                      </div>
                    </div>
+               
+                   
                
             )
         })}

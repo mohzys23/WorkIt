@@ -1,6 +1,6 @@
 const addbookRouter = require('express').Router();
 
-const User = require('../models/User');
+const Book = require('../models/Addbook');
 
 
 /**
@@ -30,26 +30,26 @@ addbookRouter.get('/', async (request, response, next) => {
 
 
 
-addbookRouter.post('/signup', async (request, response) => {
+addbookRouter.post('/addbook', async (request, response) => {
 
-    const {title, author, bookcover, bookfile} = request.body;;
+    const {title, author} = request.body;
 
-     const user = new User({
+     const book = new Book({
         title: title,
-        authoe: author,
-        bookcover: bookcover,
-        bookfile: bookfile,
+        author: author,
+        // bookcover: bookcover,
+        // bookfile: bookfile,
         
     })
 
-    user.save((error) => {
+    book.save((error) => {
         if (error) {
             response.status(500).json({ msg: 'Sorry, internal server errors' });
             return;
         }
         // SignupPost
         return response.json({
-            msg: 'Your data has been saved!!!!!!'
+            msg: 'Your book data has been saved!!!!!!'
         });
        
        
@@ -57,7 +57,7 @@ addbookRouter.post('/signup', async (request, response) => {
 
 
 
-    console.log("Signup data saved");
+    console.log("book data data saved");
 
 })
 

@@ -2,6 +2,8 @@
 
 import React from "react";
 import '../Styles/contact.scss';
+
+
 export default class MyForm extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +30,7 @@ export default class MyForm extends React.Component {
         <input type="email" name="email"  />
         <br />
         <label>Message:</label>
-        <textarea type="text" name="message" rows="7" cols="50" className="textarea" />
+        <textarea type="text" name="message" rows="9" cols="50" className="textarea" />
         <br />
         {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
