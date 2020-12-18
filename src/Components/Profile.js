@@ -3,7 +3,6 @@ import profileimg from '../Assets-books/Moses.jpg';
 import '../Styles/Profile.scss';
 import axios from 'axios';
 import {My_book, /*Recently_viewed */ } from '../data/books';
-import { Link } from "react-router-dom";
 
 
 export default function  Profile() {

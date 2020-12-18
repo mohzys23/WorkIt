@@ -6,7 +6,6 @@ import '../Styles/TopAuthors.scss';
 // import img4 from '../Assets-books/foodlab.jpg';
 // import img5 from '../Assets-books/morning.jpg';
 import {Topbooks} from '../data/books';
-import { Link } from "react-router-dom";
 
 
  function TopAuthors() {
