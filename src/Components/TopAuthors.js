@@ -9,12 +9,12 @@ import {Topbooks} from '../data/books';
 import { Link } from "react-router-dom";
 
 
-export default function TopAuthors() {
+ function TopAuthors() {
     return(
         <div className="topauthors">
             <h1>Top Books</h1>
 
-               <div className="topauthors2">
+               <div className="top-authors2">
 
 
         {Topbooks.map((item) => {
@@ -29,7 +29,7 @@ export default function TopAuthors() {
                                 <div className="section-text">
                                     <h5>{item.title}</h5>
                                     <h6>{item.author}</h6>
-                                    <button><Link to={item.url} target="blank"> Get Book</Link></button>
+                                    <button><a href={item.url} target="blank"> Get Book</a></button>
                                 </div>
                             </div>
                      </div>
@@ -44,3 +44,5 @@ export default function TopAuthors() {
         </div>
     );
 }
+
+export default TopAuthors;

@@ -24,7 +24,7 @@ export default function Books(props) {
                                 <div className="section-text" >
                                     <h5>{item.title}</h5>
                                     <h6>{item.author}</h6>
-                                    <button>Get Book</button>
+                                    <button><a href={item.url}>Get Book</a></button>
                                 </div>
                             </div>
                      </div>

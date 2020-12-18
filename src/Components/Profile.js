@@ -172,7 +172,7 @@ export default function  Profile() {
                                 </div>
                                 <div className="section-text">
                                     <h5>{item.title}</h5>
-                                    <button><Link to="https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNWQyMWJhNTBjOTRjN2U">Open Book</Link></button>
+                                    <button><a href={item.url}>Open Book</a></button>
                                 </div>
                             </div>
                      </div>
