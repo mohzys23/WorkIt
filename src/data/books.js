@@ -22,13 +22,13 @@ export const books = [
         img: img2,
         title: 'Critical Thinking',
         author: 'Moses Ubah',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDo2NDY5OTZlN2U1Y2M2YmJh',
     },
     {
         img: img3,
         title: 'Draw Human Body',
         author: 'Moses Ubah',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDo3ZGQ2NGVhMjFjZmEyNzRh',
     },
     {
         img: img4,
@@ -40,19 +40,19 @@ export const books = [
         img: img5,
         title: 'Miracle Morning',
         author: 'Moses Ubah',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoxN2EyNGY1MmEzYTAwZWNk',
     },
     {
         img: img6,
         title: 'Alice in Wonderland',
         author: 'Lewis Carroll',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDo3MTMxMGUzODVkNWFkM2U1',
     },
     {
         img: img7,
         title: 'Beauty and the Beast',
         author: 'Anonymous',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDoyNzY0MTQyMWNjZjRiMzUy',
     },
     {
         img: img8,
@@ -71,7 +71,7 @@ export const books = [
         img: img10,
         title: 'A Pair of Schoolgirls',
         author: 'Angela Brazil',
-        url: '',
+        url: 'https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxteW1vZmF6YmxvZ3xneDo0ZjQyYWMxOTU2ZmNkNzY1',
     },
 ]
 
